@@ -25,7 +25,7 @@ const Counter = () => {
   };
 
   return (<>
-  <h1 className="headtext">Counter</h1>
+  <h1 className="headtext">COUNTER</h1>
   <div className="content">
     <div className="container">
       <h1 className="number">{count}</h1>
