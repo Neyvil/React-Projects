@@ -1,6 +1,6 @@
-import "./index.css";
+import "./style.css";
 import { useState } from "react";
-import { XCircle } from 'lucide-react';
+import { XSquare} from 'lucide-react';
 
 function generateId(){
     return Math.floor(Math.random()*100)
@@ -25,30 +25,31 @@ function Todo() {
   }
 
   return (
-    <>
-      <div className="container">
-        <input
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          placeholder="Enter ToDO"
-        />
-      </div>
-      <button onClick={handleSubmit}>Submit</button>
+
+    <div className="container">
+    <input
+      type="text"
+      value={input}
+      onChange={(e) => setInput(e.target.value)}
+      placeholder="New Todo"
+    />
+
+    <button onClick={handleSubmit}>Submit</button>
 
     <ul className="todos-list">
-      {todo.map(({text,id})=>{
-        return <li key={id} className="todo">
+      {todo.map(({ text, id }) => (
+        <li key={id} className="todo">
           <span>{text}</span>
-          <button className="close" onClick={()=>removeTodo(id)}>
-          <XCircle />
+          <button className="close" onClick={() => removeTodo(id)}>
+            <XSquare color="red" size={18}/>
           </button>
         </li>
-      })}
+      ))}
     </ul>
-
-    </>
+  </div>
+  
   );
 }
 
 export default Todo;
+
