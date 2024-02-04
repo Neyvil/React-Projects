@@ -41,7 +41,7 @@ function Todo() {
         <li key={id} className="todo">
           <span>{text}</span>
           <button className="close" onClick={() => removeTodo(id)}>
-            <XSquare color="red" size={18}/>
+            <XSquare color="white" size={18}/>
           </button>
         </li>
       ))}
