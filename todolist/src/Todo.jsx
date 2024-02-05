@@ -3,7 +3,7 @@ import { useState } from "react";
 import { XSquare} from 'lucide-react';
 
 function generateId(){
-    return Math.floor(Math.random()*100)
+    return Math.floor(Math.random()*10)
 }
 
 function Todo() {
